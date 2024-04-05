@@ -1,7 +1,12 @@
-export const GetFormulario = () => {
+export const GetFormulario = ({handleDisplay}) => {
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    handleDisplay(1)
+  }
   return (
     <>
-      <button>GET</button>
+      <button onClick={handleSubmit} >GET</button>
     </>
-  );
+  ); 
 };
